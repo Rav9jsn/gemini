@@ -51,7 +51,6 @@ const Contextprovider = (props) => {
     let newResponse2 = newResponse.split("*").join("</br>");
 
     let newResponseAraay = newResponse2.split(" ");
-    console.log(newResponseAraay);
 
     for (let i = 0; i < newResponseAraay.length; i++) {
       const nextWord = newResponseAraay[i];
