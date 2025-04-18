@@ -15,6 +15,8 @@ const Main = () => {
   };
 
   const {
+    setDarkmode,
+    darkmode,
     onsent,
     recentprompt,
     showResult,
@@ -25,9 +27,19 @@ const Main = () => {
   } = useContext(context);
 
   return (
-    <div className="main">
+    <div
+      className="main"
+      style={{ backgroundColor: darkmode ? "#1E201E" : "#FEF9F2" }}
+    >
       <div className="nav">
-        <p>Gemini</p>
+        <p style={{ color: darkmode ? "#F2FFFF" : "#585858" }}>Gemini</p>
+        <img
+          onClick={() => setDarkmode(!darkmode)}
+          className="dark"
+          src={assets.dark}
+          style={{ backgroundColor: "white" }}
+          alt=""
+        />
         <img src={assets.user_icon} alt="" />
       </div>
 
@@ -73,7 +85,9 @@ const Main = () => {
           <div className="result">
             <div className="result-title">
               <img src={assets.user_icon} alt="" />
-              <p>{recentprompt}</p>
+              <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>
+                {recentprompt}
+              </p>
             </div>
             <div className="result-data">
               <img src={assets.gemini_icon} alt="" />
@@ -84,14 +98,28 @@ const Main = () => {
                   <hr />
                 </div>
               ) : (
-                <p dangerouslySetInnerHTML={{ __html: resultdata }}></p>
+                <p
+                  style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}
+                  dangerouslySetInnerHTML={{ __html: resultdata }}
+                ></p>
               )}
             </div>
           </div>
         )}
         <div className="main-bottom">
-          <div className="search-box">
+          <div
+            style={{
+              backgroundColor: darkmode ? "#1E201E" : "#FEF9F2",
+              border: "3px",
+              borderColor: darkmode ? "#1E201E" : "#FEF9F2",
+            }}
+            className="search-box"
+          >
             <input
+              style={{
+                color: darkmode ? "#FEF9F2" : "#1E201E",
+                backgroundColor: darkmode ? "#1E201E" : "#FEF9F2",
+              }}
               onChange={(e) => setInput(e.target.value)}
               value={input}
               type="text"
@@ -106,7 +134,10 @@ const Main = () => {
               )}
             </div>
           </div>
-          <p className="bottom-info">
+          <p
+            style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}
+            className="bottom-info"
+          >
             Gemini may display inaccurate info, including about people, so
             double-check its responses. Your privacy and Gemini Apps
           </p>

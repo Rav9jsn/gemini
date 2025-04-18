@@ -20,6 +20,12 @@
   border-radius: 50%;
 }
 
+.main .nav .dark {
+  width: 5px;
+  cursor: pointer;
+  color: white;
+}
+
 .main-container {
   margin: auto;
   max-width: 900px;

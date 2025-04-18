@@ -11,6 +11,7 @@ const Contextprovider = (props) => {
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [resultdata, setResultdata] = useState("");
+  const [darkmode, setDarkmode] = useState(false);
 
   const delayPara = (index, nextWord) => {
     setTimeout(function () {
@@ -71,6 +72,8 @@ const Contextprovider = (props) => {
     input,
     setInput,
     newChat,
+    setDarkmode,
+    darkmode,
   };
 
   return (

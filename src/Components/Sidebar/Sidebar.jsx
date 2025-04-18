@@ -5,14 +5,24 @@ import { context } from "../../context/Context";
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(true);
-  const { onsent, prevprompt, setRecentprompt, newChat } = useContext(context);
+  const {
+    onsent,
+    prevprompt,
+    setRecentprompt,
+    newChat,
+    darkmode,
+    setDarkmode,
+  } = useContext(context);
   const loadprompt = async (prompt) => {
     setRecentprompt(prompt);
     await onsent(prompt);
   };
 
   return (
-    <div className="sidebar">
+    <div
+      className="sidebar"
+      style={{ backgroundColor: darkmode ? "#1E201E" : "#FEF9F2" }}
+    >
       <div className="top">
         <img
           className="menu"
@@ -26,7 +36,12 @@ const Sidebar = () => {
         </div>
         {extended && (
           <div className="recent">
-            <p className="recent-title">Recent</p>
+            <p
+              className="recent-title"
+              style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}
+            >
+              Recent
+            </p>
             {prevprompt.map((item, i) => {
               return (
                 <div
@@ -35,7 +50,9 @@ const Sidebar = () => {
                   className="recent-entry"
                 >
                   <img src={assets.message_icon} alt="" />
-                  <p>{item.slice(0, 10)}...</p>
+                  <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>
+                    {item.slice(0, 10)}...
+                  </p>
                 </div>
               );
             })}
@@ -45,15 +62,21 @@ const Sidebar = () => {
       <div className="bottom">
         <div className="bottom-item recent-entry">
           <img src={assets.question_icon} alt="" />
-          {extended ? <p>Help</p> : null}
+          {extended ? (
+            <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>Help</p>
+          ) : null}
         </div>
         <div className="bottom-item recent-entry">
           <img src={assets.history_icon} alt="" />
-          {extended ? <p>Activity</p> : null}
+          {extended ? (
+            <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>Activity</p>
+          ) : null}
         </div>
         <div className="bottom-item recent-entry">
           <img src={assets.setting_icon} alt="" />
-          {extended ? <p>Setting</p> : null}
+          {extended ? (
+            <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>Setting</p>
+          ) : null}
         </div>
       </div>
     </div>
