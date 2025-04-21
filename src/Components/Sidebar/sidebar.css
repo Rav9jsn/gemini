@@ -65,7 +65,13 @@
   cursor: pointer;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* @media (max-width: 400px) {
   .sidebar {
     width: 10vw;
     padding: 25px 0px;
@@ -98,4 +104,4 @@
   .sidebar {
     display: none;
   }
-}
+} */

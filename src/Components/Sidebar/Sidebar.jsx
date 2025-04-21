@@ -27,7 +27,7 @@ const Sidebar = () => {
         <img
           className="menu"
           onClick={() => setExtended(!extended)}
-          src={assets.menu_icon}
+          src={darkmode ? assets.white_nav : assets.menu_icon}
           alt=""
         />
         <div onClick={() => newChat()} className="new-chat">
@@ -61,19 +61,22 @@ const Sidebar = () => {
       </div>
       <div className="bottom">
         <div className="bottom-item recent-entry">
-          <img src={assets.question_icon} alt="" />
+          <img
+            src={darkmode ? assets.white_help : assets.question_icon}
+            alt=""
+          />
           {extended ? (
             <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>Help</p>
           ) : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={assets.history_icon} alt="" />
+          <img src={darkmode ? assets.white_act : assets.history_icon} alt="" />
           {extended ? (
             <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>Activity</p>
           ) : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={assets.setting_icon} alt="" />
+          <img src={darkmode ? assets.white_set : assets.setting_icon} alt="" />
           {extended ? (
             <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>Setting</p>
           ) : null}

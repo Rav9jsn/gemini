@@ -15,6 +15,11 @@ import send_icon from "./send_icon.png";
 import gemini_icon from "./gemini_icon.png";
 import dark from "./dark-mode-6682.svg";
 import light from "./light-mode.svg";
+import white_nav from "./whiteNav.svg";
+import white_set from "./whitesettings.svg";
+import white_act from "./clock-history.png";
+import white_help from "./Whitehelp.png";
+import send_white from "./send-white-icon.svg";
 
 export const assets = {
   history_icon,
@@ -34,4 +39,9 @@ export const assets = {
   gemini_icon,
   dark,
   light,
+  white_nav,
+  white_set,
+  white_act,
+  white_help,
+  send_white,
 };

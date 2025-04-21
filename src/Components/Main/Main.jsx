@@ -55,26 +55,58 @@ const Main = () => {
             </div>
             <div className="cards">
               {" "}
-              <div className="card">
-                <p onClick={givenPrompt}>
+              <div
+                style={{ backgroundColor: darkmode ? "#343634" : "#f0f4f9" }}
+                className="card"
+              >
+                <p
+                  style={{
+                    color: darkmode ? "#FEF9F2" : "#1E201E",
+                  }}
+                  onClick={givenPrompt}
+                >
                   Suggest beautiful places to see on ab upcoming road trip
                 </p>
                 <img src={assets.compass_icon} alt="" />
               </div>
-              <div className="card">
-                <p onClick={givenPrompt}>
+              <div
+                style={{ backgroundColor: darkmode ? "#343634" : "#f0f4f9" }}
+                className="card"
+              >
+                <p
+                  style={{
+                    color: darkmode ? "#FEF9F2" : "#1E201E",
+                  }}
+                  onClick={givenPrompt}
+                >
                   Briefly summarize this concept: urban planning
                 </p>
                 <img src={assets.bulb_icon} alt="" />
               </div>
-              <div className="card">
-                <p onClick={givenPrompt}>
+              <div
+                style={{ backgroundColor: darkmode ? "#343634" : "#f0f4f9" }}
+                className="card"
+              >
+                <p
+                  style={{
+                    color: darkmode ? "#FEF9F2" : "#1E201E",
+                  }}
+                  onClick={givenPrompt}
+                >
                   Brainstorm team bonding activities for our work retreat
                 </p>
                 <img src={assets.message_icon} alt="" />
               </div>
-              <div className="card">
-                <p onClick={givenPrompt}>
+              <div
+                style={{ backgroundColor: darkmode ? "#343634" : "#f0f4f9" }}
+                className="card"
+              >
+                <p
+                  style={{
+                    color: darkmode ? "#FEF9F2" : "#1E201E",
+                  }}
+                  onClick={givenPrompt}
+                >
                   Tell me about React js and React native
                 </p>
                 <img src={assets.code_icon} alt="" />
