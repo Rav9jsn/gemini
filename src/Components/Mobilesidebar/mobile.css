@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 10;
   width: 80%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
