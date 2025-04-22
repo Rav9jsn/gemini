@@ -1,6 +1,6 @@
 .main {
   flex: 1;
-  min-height: 97vh;
+  min-height: 100vh;
   padding-bottom: 15vh;
   position: relative;
   z-index: 1;
