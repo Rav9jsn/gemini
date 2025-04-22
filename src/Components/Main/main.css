@@ -1,11 +1,10 @@
 .main {
   flex: 1;
-  min-height: 100vh;
+  min-height: 97vh;
   padding-bottom: 15vh;
   position: relative;
   z-index: 1;
   animation: fadein 1.5s;
-  /* background-color: #bfc9cac9; */
 }
 
 .main .nav {
