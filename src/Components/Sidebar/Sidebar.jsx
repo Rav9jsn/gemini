@@ -34,35 +34,35 @@ const Sidebar = () => {
           <img src={assets.plus_icon} alt="" />
           {extended ? <p>New Chat</p> : null}
         </div>
-        {extended && (
-          <div className="recent">
-            <p
-              className="recent-title"
-              style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}
-            >
-              Recent
-            </p>
-            {prevprompt.map((item, i) => {
-              return (
-                <div
-                  key={i}
-                  onClick={() => loadprompt(item)}
-                  className="recent-entry"
-                >
-                  <img src={assets.message_icon} alt="" />
-                  <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>
-                    {item.slice(0, 10)}...
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        )}
+
+        <div className="recent">
+          <p
+            className="recent-title"
+            style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}
+          >
+            Recent
+          </p>
+          {prevprompt.map((item, i) => {
+            return (
+              <div
+                key={i}
+                onClick={() => loadprompt(item)}
+                className="recent-entry"
+              >
+                <img src={assets.message_icon} alt="" />
+                <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>
+                  {item.slice(0, 10)}...
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className="bottom">
         <div className="bottom-item recent-entry">
           <img
             src={darkmode ? assets.white_help : assets.question_icon}
+            style={{ backgroundColor: "white" }}
             alt=""
           />
           {extended ? (
@@ -70,7 +70,11 @@ const Sidebar = () => {
           ) : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={darkmode ? assets.white_act : assets.history_icon} alt="" />
+          <img
+            style={{ backgroundColor: "white" }}
+            src={assets.history_icon}
+            alt=""
+          />
           {extended ? (
             <p style={{ color: darkmode ? "#FEF9F2" : "#1E201E" }}>Activity</p>
           ) : null}

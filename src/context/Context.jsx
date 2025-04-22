@@ -11,7 +11,10 @@ const Contextprovider = (props) => {
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [resultdata, setResultdata] = useState("");
-  const [darkmode, setDarkmode] = useState(false);
+  // Check your device default darkmode is on or not
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [darkmode, setDarkmode] = useState(isDarkMode);
+  const [extended, setExtended] = useState(false);
 
   const delayPara = (index, nextWord) => {
     setTimeout(function () {
@@ -74,6 +77,8 @@ const Contextprovider = (props) => {
     newChat,
     setDarkmode,
     darkmode,
+    extended,
+    setExtended,
   };
 
   return (

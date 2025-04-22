@@ -1,9 +1,27 @@
 import "./main.css";
 import { assets } from "../../assets/assets";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { context } from "../../context/Context";
 
 const Main = () => {
+  // To get exaxt time for greet user
+  var date = new Date();
+  const hour = date.getHours();
+  const [greetings, setGreetings] = useState("Hello, Dev.");
+  useEffect(() => {
+    const greetingsWord = () => {
+      if (hour >= 4 && hour < 12) return setGreetings("Good Morning");
+      else if (hour > 12 && hour < 17) {
+        setGreetings("	Good Afternoon");
+      } else if (hour > 17 && hour < 20) {
+        setGreetings("Good Evening");
+      } else {
+        setGreetings("Hey there, night owl! What brings you here?");
+      }
+    };
+    greetingsWord();
+  }, [hour]);
+
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       onsent();
@@ -24,6 +42,8 @@ const Main = () => {
     resultdata,
     input,
     setInput,
+    setExtended,
+    extended,
   } = useContext(context);
 
   return (
@@ -32,6 +52,12 @@ const Main = () => {
       style={{ backgroundColor: darkmode ? "#1E201E" : "#FEF9F2" }}
     >
       <div className="nav">
+        <img
+          className="menu"
+          onClick={() => setExtended(!extended)}
+          src={darkmode ? assets.white_nav : assets.menu_icon}
+          alt=""
+        />
         <p style={{ color: darkmode ? "#F2FFFF" : "#585858" }}>Gemini</p>
         <img
           onClick={() => setDarkmode(!darkmode)}
@@ -49,7 +75,7 @@ const Main = () => {
             {" "}
             <div className="greet">
               <p>
-                <span>Hello, Dev.</span>
+                <span>{greetings}</span>
               </p>
               <p>How Can I help you today?</p>
             </div>
@@ -159,10 +185,14 @@ const Main = () => {
               placeholder="Enter a Prompt here"
             />
             <div>
-              <img src={assets.gallery_icon} alt="" />
-              <img src={assets.mic_icon} alt="" />
+              <img
+                style={{ backgroundColor: "white" }}
+                src={assets.gallery_icon}
+                alt=""
+              />
+              <img src={darkmode ? assets.send_mic : assets.mic_icon} alt="" />
               {input && (
-                <img onClick={() => onsent()} src={assets.send_icon} alt="" />
+                <img onClick={() => onsent()} src={assets.send_white} alt="" />
               )}
             </div>
           </div>

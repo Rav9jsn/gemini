@@ -3,7 +3,9 @@
   min-height: 100vh;
   padding-bottom: 15vh;
   position: relative;
+  z-index: 1;
   animation: fadein 1.5s;
+  /* background-color: #bfc9cac9; */
 }
 
 .main .nav {
@@ -18,6 +20,13 @@
 .main .nav img {
   width: 40px;
   border-radius: 50%;
+}
+
+.main .nav .menu {
+  display: block;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 30px;
 }
 
 .main .nav .dark {
@@ -89,6 +98,9 @@
   margin: auto;
 }
 
+.main-bottom img {
+  border-radius: 30%;
+}
 .search-box {
   display: flex;
   align-items: center;
@@ -220,5 +232,18 @@
 
   .search-box input {
     font-size: 13px;
+  }
+}
+@media (min-width: 526px) {
+  .menu {
+    display: none;
+  }
+  .main .nav .menu {
+    display: none;
+  }
+}
+@media (max-width: 526px) {
+  .main .nav p {
+    display: none;
   }
 }

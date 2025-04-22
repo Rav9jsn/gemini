@@ -8,8 +8,14 @@
 
 #root {
   min-height: 100vh;
-  display: flex;
-  animation: fadein 2s;
+  animation: fadein 1s;
+}
+
+@media (min-width: 526px) {
+  #root {
+    display: flex;
+    animation: fadein 2s;
+  }
 }
 
 @keyframes fadein {

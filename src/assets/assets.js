@@ -19,7 +19,10 @@ import white_nav from "./whiteNav.svg";
 import white_set from "./whitesettings.svg";
 import white_act from "./clock-history.png";
 import white_help from "./Whitehelp.png";
-import send_white from "./send-white-icon.svg";
+import send_white from "./send.png";
+import send_mic from "./microphone.png";
+import menu_rem from "./removemenu.png";
+import menu_rem_whi from "./xIcon.png";
 
 export const assets = {
   history_icon,
@@ -44,4 +47,7 @@ export const assets = {
   white_act,
   white_help,
   send_white,
+  send_mic,
+  menu_rem,
+  menu_rem_whi,
 };
