@@ -1,12 +1,33 @@
-# React + Vite
+# 🌌 Gemini 2.0 – AI Text Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gemini 2.0 is a fast, clean, and modern web app that generates AI-powered responses in real-time. Inspired by Google's Gemini, this clone was built to showcase frontend development skills while offering a smooth and intelligent user experience.
 
-Currently, two official plugins are available:
+## 🔥 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🧠 **AI Text Generation**  
+  Get instant, smart text responses using AI.
 
-## Expanding the ESLint configuration
+- 🕹️ **Responsive Design**  
+  Looks great on mobile, tablet, and desktop devices.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⏰ **Time-Based Greetings**  
+  Greets you appropriately depending on the time of day (Good Morning, Good Evening, etc.)
+
+- 🌗 **Dark Mode Support**  
+  Automatically adapts to your system’s dark/light theme.
+
+- 💾 **Search Memory**  
+  Saves your last search so you can easily revisit it.
+
+- ⚡ **Lightning-Fast Performance**  
+  Minimal design and optimized performance for quick interactions.
+
+## 🛠️ Tech Stack
+
+- HTML  
+- CSS (with responsiveness)  
+- JavaScript  
+- React.js
+- AI API (Gemini API)  
+
+
