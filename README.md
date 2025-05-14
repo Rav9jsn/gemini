@@ -2,7 +2,7 @@
 
 Gemini 2.0 is a fast, clean, and modern web app that generates AI-powered responses in real-time. Inspired by Google's Gemini, this clone was built to showcase frontend development skills while offering a smooth and intelligent user experience.
 
-## 🔥 Features
+🔥 Features
 
 - 🧠 **AI Text Generation**  
   Get instant, smart text responses using AI.
@@ -22,12 +22,19 @@ Gemini 2.0 is a fast, clean, and modern web app that generates AI-powered respon
 - ⚡ **Lightning-Fast Performance**  
   Minimal design and optimized performance for quick interactions.
 
-## 🛠️ Tech Stack
+🛠️ Tech Stack
 
 - HTML  
 - CSS (with responsiveness)  
 - JavaScript  
 - React.js
-- AI API (Gemini API)  
+- AI API (Gemini API)
+  
+Installation
+To get a local copy of this project up and running, follow these steps:
+
+1. Clone the repository:
+   ```bash
+  git clone (https://github.com/Rav9jsn/gemini.git)
 
 
