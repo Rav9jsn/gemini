@@ -23,8 +23,10 @@ const Sidebar = () => {
     <>
       {extended && (
         <div
-          className="sidebarmob"
-          style={{ backgroundColor: darkmode ? "#1E201E" : "#bfc9cac9" }}
+          className={`sidebarmob ${extended ? "open" : "close"}`}
+          style={{
+            backgroundColor: darkmode ? "#1E201E" : "#bfc9cac9",
+          }}
         >
           <div className="top">
             <img

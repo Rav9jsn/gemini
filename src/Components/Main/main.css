@@ -4,7 +4,7 @@
   padding-bottom: 15vh;
   position: relative;
   z-index: 1;
-  animation: fadein 1.5s;
+  /* animation: fadein 1.5s; */
 }
 
 .main .nav {

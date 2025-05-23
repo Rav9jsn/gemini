@@ -7,9 +7,10 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 25px 15px;
-  border-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
   margin-bottom: 30px;
-  animation: fadein 1s;
+  animation: fadeinmob 1s;
 }
 
 .sidebarmob img {
@@ -32,7 +33,7 @@
 .sidebarmob .recent {
   display: flex;
   flex-direction: column;
-  animation: fadeinm 1.5s;
+  animation: fadeinmob 1.5s;
 }
 
 .sidebarmob .recent-title {
@@ -44,6 +45,7 @@
   display: block;
   cursor: pointer;
   margin-left: 10px;
+  /* animation: fadeout 1s; */
 }
 
 .sidebarmob .recent-entry {
@@ -79,12 +81,23 @@
     display: none;
   }
 }
-@keyframes fadeinm {
+@keyframes fadeinmob {
   0% {
     transform: translateX(-100px);
     opacity: 0.1;
   }
   100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  100% {
+    transform: translateX(-100px);
+    opacity: 0.1;
+  }
+  0% {
     transform: translateX(0px);
     opacity: 1;
   }

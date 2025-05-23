@@ -11,9 +11,9 @@ const Main = () => {
   useEffect(() => {
     const greetingsWord = () => {
       if (hour >= 4 && hour < 12) return setGreetings("Good Morning");
-      else if (hour > 12 && hour < 17) {
+      else if (hour >= 12 && hour < 17) {
         setGreetings("	Good Afternoon");
-      } else if (hour > 17 && hour < 20) {
+      } else if (hour >= 17 && hour < 20) {
         setGreetings("Good Evening");
       } else {
         setGreetings("Hey there, night owl! What brings you here?");
